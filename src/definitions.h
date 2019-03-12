@@ -24,9 +24,9 @@ static constexpr auto STATUS_SERVER_NAME = "The Forgotten Server";
 static constexpr auto STATUS_SERVER_VERSION = "1.3";
 static constexpr auto STATUS_SERVER_DEVELOPERS = "Mark Samman";
 
-static constexpr auto CLIENT_VERSION_MIN = 1097;
-static constexpr auto CLIENT_VERSION_MAX = 1098;
-static constexpr auto CLIENT_VERSION_STR = "10.98";
+static constexpr auto CLIENT_VERSION_MIN = 860;
+static constexpr auto CLIENT_VERSION_MAX = 860;
+static constexpr auto CLIENT_VERSION_STR = "8.60";
 
 static constexpr auto AUTHENTICATOR_DIGITS = 6U;
 static constexpr auto AUTHENTICATOR_PERIOD = 30U;
@@ -40,6 +40,7 @@ static constexpr auto AUTHENTICATOR_PERIOD = 30U;
 #endif
 
 #include <cmath>
+#include <vector>
 
 #ifdef _WIN32
 #ifndef NOMINMAX
@@ -60,6 +61,7 @@ static constexpr auto AUTHENTICATOR_PERIOD = 30U;
 #pragma warning(disable:4267) // 'var' : conversion from 'size_t' to 'type', possible loss of data
 #pragma warning(disable:4351) // new behavior: elements of array will be default initialized
 #pragma warning(disable:4458) // declaration hides class member
+#pragma warning(disable:4996) //gethostbyname deprecated
 #endif
 
 #define strcasecmp _stricmp
@@ -75,4 +77,5 @@ static constexpr auto AUTHENTICATOR_PERIOD = 30U;
 #define M_PI 3.14159265358979323846
 #endif
 
+typedef std::vector<std::pair<uint32_t, uint32_t>> IPList;
 #endif
