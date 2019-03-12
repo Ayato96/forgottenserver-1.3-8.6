@@ -29,6 +29,7 @@
 #include "ban.h"
 #include <iomanip>
 #include "game.h"
+#include "tools.h"
 
 extern ConfigManager g_config;
 extern Game g_game;
