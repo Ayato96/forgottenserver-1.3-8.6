@@ -476,6 +476,7 @@ class Creature : virtual public Thing
 		std::list<Creature*> summons;
 		CreatureEventList eventsList;
 		ConditionList conditions;
+		std::vector<Condition*> toReleaseConditions;
 
 		std::forward_list<Direction> listWalkDir;
 
